@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <!-- From Uiverse.io by ammarsaa --> 
+<form id="formUsuario" class="form">
+  <p class="title">Register </p>
+  <p class="message">Signup now and get full access to our app. </p>
+
+  <div class="flex">
+    <label>
+      <input class="input" type="text" id="pNome" required />
+      <span>Firstname</span>
+    </label>
+
+    <label>
+      <input class="input" type="text" id="sNome" required />
+      <span>Lastname</span>
+    </label>
+  </div>
+
+  <label>
+    <input class="input" type="email" id="mail" required />
+    <span>Email</span>
+  </label>
+
+  <label>
+    <input class="input" type="password" id="senha" required />
+    <span>Password</span>
+  </label>
+
+  <label>
+    <input class="input" type="password" placeholder="" required="" id="confirmarSenha">
+    <span>Confirm password</span>
+  </label>
+
+  <button class="submit" type="submit">Submit</button>
+  <button class="submit" type="button" id="ver">Verificar cadastros</button>
+
+
+</form>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js"></script>
+    <script type="module" src="app.js"></script>
+</form>
+</body>
+</html>

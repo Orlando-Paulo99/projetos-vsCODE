@@ -31,6 +31,7 @@ const auth = getAuth(app);
 const usuariosRef = collection(db, "usuarios");
 
 // DOM
+//guardando os ID nas variaveis
 const form = document.getElementById("formUsuario");
 const primeiroNomeInput = document.getElementById("pNome");
 const sobrenomeInput = document.getElementById("sNome");
@@ -40,17 +41,13 @@ const confirmarSenhaInput = document.getElementById("confirmarSenha");
 const botaoVer = document.getElementById("ver");
 
 // Submeter cadastro
+//evento de quando o usuario se cadastrar apresenseta essas informaçôes
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   if (senhaInput.value !== confirmarSenhaInput.value) {
     alert("As senhas não coincidem.");
     return;
-  }
-
-  else{
-        alert("Cadastro realizado");
-
   }
 
   try {
@@ -80,15 +77,30 @@ form.addEventListener("submit", async (e) => {
 
     alert("Usuário registrado com sucesso!");
   } catch (error) {
-    console.error("Erro ao cadastrar:", error);
-    alert("Erro ao cadastrar: " + error.message);
+    if (error.code === "auth/email-already-in-use") {
+      alert("Este e-mail já está cadastrado. Use outro.");
+    } else {
+      alert("Erro ao cadastrar: " + error.message);
+    }
   }
 });
 
-// Ver usuários cadastrados (opcional)
+/**
+ * // Ver usuários cadastrados (opcional)
 botaoVer.addEventListener("click", async (e) => {
   e.preventDefault();
   const snapshot = await getDocs(usuariosRef);
   console.clear();
   snapshot.forEach(doc => console.log(doc.id, doc.data()));
 });
+ */
+
+
+
+
+
+
+
+
+
+

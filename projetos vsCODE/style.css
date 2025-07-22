@@ -1,14 +1,22 @@
+body{
+  background-color: #000;
+}
+
+ul{
+  background-color: #fff;
+  color: #fff;
+}
 /* From Uiverse.io by ammarsaa */ 
 .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 350px;
+  max-width: 300px;
   padding: 20px;
   border-radius: 20px;
   position: absolute;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #00a6fb;
+  color: #000;
   border: 1px solid #333;
   top: 50%;
   left: 50%;
@@ -24,7 +32,7 @@
   display: flex;
   align-items: center;
   padding-left: 30px;
-  color: #00bfff;
+  color: #03045e;
 }
 
 .title::before {
@@ -78,8 +86,8 @@
 }
 
 .form label .input {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   width: 100%;
   padding: 20px 05px 05px 10px;
   outline: 0;
@@ -88,7 +96,7 @@
 }
 
 .form label .input + span {
-  color: rgba(255, 255, 255, 0.5);
+  color: #000;
   position: absolute;
   left: 10px;
   top: 0px;
@@ -122,12 +130,12 @@
   color: #fff;
   font-size: 16px;
   transform: .3s ease;
-  background-color: #00bfff;
+  background-color: #03045e;
 }
 
 .submit:hover {
-  background-color: #00bfff96;
-}
+  background-color: #fff;
+  color: #03045e;}
 
 @keyframes pulse {
   from {
